@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+coverage/
+*.local
+.env
+.env.*
+!.env.example
+*.log
+# Keep local application-review observations and interview preparation private.
+docs/reference-review.md
+docs/walkthrough.md
