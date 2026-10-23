@@ -68,6 +68,8 @@ React 19 + TypeScript + Vite, Zod, Vitest and React Testing Library. Pure functi
 
 ## Release and limitations
 
-Run tests, fixture QA and the build before deploying. `vercel.json` defines static build output and security headers. Production must remain synthetic. The original private PDF, workbook and Notion URL are not bundled into the public app.
+For automatic deployments, connect this repository to the existing `planning-performance-insight-lab` Vercel project and select `main` as the production branch. The committed configuration installs the lockfile with `npm ci`, then runs `npm run verify`: all automated tests, fixture QA, TypeScript checking and the production build must pass before Vercel can publish the new version. A failed command stops deployment and keeps the existing production version live. Once connected, pull-request branches receive preview deployments with the same validation. No deployment tokens or GitHub Actions secrets are required. Run `npm run verify` locally before pushing.
+
+`vercel.json` defines this mandatory build gate, static output and security headers. The build also preserves the public `/evidence/` screenshot and architecture URLs. Production must remain synthetic. The original private PDF, workbook and Notion URL are not bundled into the public app.
 
 This is an illustrative local workflow, not authenticated multi-user governance. Audit logs can be edited or erased by the visitor and are not tamper-proof. Browser-storage quotas can limit long sessions; failures display a warning and audit export remains available. No production employer integrations, Power BI or Power Automate deployments are claimed. n8n is omitted because there is no meaningful external refresh or notification flow in this scope.

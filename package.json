@@ -8,7 +8,8 @@
     "dev:vite": "node scripts/tool.mjs vite --host 127.0.0.1",
     "test": "node scripts/tool.mjs vitest run",
     "test:watch": "node scripts/tool.mjs vitest",
-    "build": "node scripts/tool.mjs tsc --noEmit && node scripts/tool.mjs vite build",
+    "build": "node scripts/tool.mjs tsc --noEmit && node scripts/tool.mjs vite build && node scripts/copy-evidence.mjs",
+    "verify": "npm test && npm run qa && npm run build",
     "preview": "node scripts/tool.mjs vite preview --host 127.0.0.1",
     "qa": "tsx scripts/qa.ts"
   },
