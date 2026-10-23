@@ -1,0 +1,47 @@
+{
+  "project": "planning-performance-insight-lab",
+  "repository": "ayosomo/Planning-Performance-Insight-Lab",
+  "productionDomain": "planning-performance-insight-lab.vercel.app",
+  "baselineCommit": "a8e55db501863b1dec38e6caa5a16499fec62b49",
+  "baselineDeployment": "dpl_9imxJ747YkDQeZHgsayB6yK3s215",
+  "intentionalFailureCommit": "a512aabb961e683717a1af1bd1c14adf17fc9bc5",
+  "failedDeployment": "dpl_69DVZVvfuYQBY1USXRBuKwy29weC",
+  "failure": "1 intentionally failed test; 45 passed; npm run verify exited with 1",
+  "productionUnchanged": {
+    "deploymentId": true,
+    "httpStatus": 200,
+    "htmlSHA256": "16FDD269BBD6948F67D28EEAE84B4652EB457FCBB599E6C719B221609E1C050D",
+    "html": true,
+    "javascript": true,
+    "css": true
+  },
+  "cleanupCommit": "55535872fb5f13ff7dd9410f87daabb1356600c3",
+  "recovery": {
+    "commit": "55535872fb5f13ff7dd9410f87daabb1356600c3",
+    "deployment": "dpl_D9DpiL8UKUm8yvaeXNdASjB7n6gE",
+    "status": "READY",
+    "testsPassed": 45,
+    "probeRemoved": true
+  },
+  "verifiedOn": "2026-10-23",
+  "evidence": {
+    "screenshot": "screenshots/deployment-gate-blocked.jpg",
+    "liveCheckAfterFailedDeployment": {
+      "Status": 200,
+      "HtmlUnchanged": true,
+      "HtmlSHA256": "16FDD269BBD6948F67D28EEAE84B4652EB457FCBB599E6C719B221609E1C050D",
+      "Assets": [
+        {
+          "Path": "/assets/index-mn3gr-jk.js",
+          "Unchanged": true,
+          "SHA256": "F3BBA013827461E8FE903881884A81B514D951B4DD5D17F6C3AB0809A10367FE"
+        },
+        {
+          "Path": "/assets/index-DuTrwrV0.css",
+          "Unchanged": true,
+          "SHA256": "1A1CE636F3CD02E05080B426BDBF6D44D2F58EDC6739597AA4BE08BBAA1E5E3E"
+        }
+      ]
+    }
+  }
+}

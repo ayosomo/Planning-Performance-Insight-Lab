@@ -67,6 +67,28 @@ flowchart LR
 
 React 19 + TypeScript + Vite, Zod, Vitest and React Testing Library. Pure functions own calculations and the review state machine. Charts use labelled HTML bars with visible counts. Vercel serves static assets; no backend, credentials or environment variables are required.
 
+## Deployment verification
+
+Verified on **23 October 2026** using real pushes to `main`. Vercel runs `npm ci`, then `npm run verify` (`npm test && npm run qa && npm run build`) before publishing.
+
+| Check | Commit | Observed result |
+| --- | --- | --- |
+| Passing push | [`a8e55db`](https://github.com/ayosomo/Planning-Performance-Insight-Lab/commit/a8e55db501863b1dec38e6caa5a16499fec62b49) | Automatically triggered a production deployment. All 45 tests, fixture QA, TypeScript checking and the build passed; publication completed. |
+| Intentional failing test | [`a512aab`](https://github.com/ayosomo/Planning-Performance-Insight-Lab/commit/a512aabb961e683717a1af1bd1c14adf17fc9bc5) | 1 intentional failure and 45 passing tests. `npm run verify` exited with code 1; Vercel marked the deployment **Error** and GitHub reported **failure**. The commit was not published to the live domain. |
+| Cleanup and recovery | [`5553587`](https://github.com/ayosomo/Planning-Performance-Insight-Lab/commit/55535872fb5f13ff7dd9410f87daabb1356600c3) | Removed the temporary failing test. All 45 tests and the remaining verification steps passed; automatic production deployment returned to **Ready**. |
+
+During the failed deployment, [the live site](https://planning-performance-insight-lab.vercel.app/) continued to serve **HTTP 200** from the previous deployment, `dpl_9imxJ747YkDQeZHgsayB6yK3s215` (commit `a8e55db`). SHA-256 comparisons taken before the probe and after its failure confirmed identical HTML, JavaScript and CSS:
+
+| Resource | SHA-256 before and after the failed deployment |
+| --- | --- |
+| `/` (HTML response text, UTF-8) | `16FDD269BBD6948F67D28EEAE84B4652EB457FCBB599E6C719B221609E1C050D` |
+| `/assets/index-mn3gr-jk.js` | `F3BBA013827461E8FE903881884A81B514D951B4DD5D17F6C3AB0809A10367FE` |
+| `/assets/index-DuTrwrV0.css` | `1A1CE636F3CD02E05080B426BDBF6D44D2F58EDC6739597AA4BE08BBAA1E5E3E` |
+
+![Vercel rejected the intentional failing-test deployment](docs/screenshots/deployment-gate-blocked.jpg)
+
+The [verification record](docs/deployment-verification.json) preserves the deployment IDs, commit SHAs, fingerprints and outcomes. Vercel dashboards provide the [passing deployment](https://vercel.com/kosomo44-8505s-projects/planning-performance-insight-lab/9imxJ747YkDQeZHgsayB6yK3s215), [blocked deployment and build logs](https://vercel.com/kosomo44-8505s-projects/planning-performance-insight-lab/69DVZVvfuYQBY1USXRBuKwy29weC), and [successful recovery](https://vercel.com/kosomo44-8505s-projects/planning-performance-insight-lab/D9DpiL8UKUm8yvaeXNdASjB7n6gE); dashboard access may require a Vercel account with project access. The public commits, screenshot and verification record can be reviewed directly in this repository. This records the observed release-gate check; the temporary failing test is no longer on `main`.
+
 ## Release and limitations
 
 This repository is connected to the `planning-performance-insight-lab` Vercel project. Production deployments use the `main` branch. The committed configuration installs the lockfile with `npm ci`, then runs `npm run verify`: all automated tests, fixture QA, TypeScript checking and the production build must pass before Vercel can publish the new version. A failed command stops deployment and keeps the existing production version live. Pull-request branches receive preview deployments with the same validation. No deployment tokens or GitHub Actions secrets are required. Run `npm run verify` locally before pushing.
