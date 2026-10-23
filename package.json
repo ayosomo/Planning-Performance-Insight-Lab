@@ -8,13 +8,15 @@
     "dev:vite": "node scripts/tool.mjs vite --host 127.0.0.1",
     "test": "node scripts/tool.mjs vitest run",
     "test:watch": "node scripts/tool.mjs vitest",
-    "build": "node scripts/tool.mjs tsc --noEmit && node scripts/tool.mjs vite build && node scripts/copy-evidence.mjs",
+    "build": "node scripts/tool.mjs tsc --noEmit && node scripts/copy-evidence.mjs && node scripts/tool.mjs vite build",
     "verify": "npm test && npm run qa && npm run build",
-    "preview": "node scripts/tool.mjs vite preview --host 127.0.0.1",
-    "qa": "tsx scripts/qa.ts"
+    "preview": "node scripts/serve.mjs",
+    "qa": "tsx scripts/qa.ts",
+    "test:workflow": "node scripts/workflow-smoke.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
+    "nitro": "^3.0.260903-beta",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "workflow": "^5.2.3",
@@ -32,7 +34,7 @@
     "jsdom": "latest",
     "tsx": "latest",
     "typescript": "latest",
-    "vite": "7.3.7",
+    "vite": "8.3.5",
     "vitest": "4.1.12"
   }
 }

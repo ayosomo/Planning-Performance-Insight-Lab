@@ -36,3 +36,6 @@ jobs:
 
       - name: Run tests, fixture QA, type checking and build
         run: npm run verify
+
+      - name: Verify compiled workflow and restart persistence
+        run: npm run test:workflow

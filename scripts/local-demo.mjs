@@ -9,6 +9,8 @@ const run=args=>new Promise((resolve,reject)=>{const child=spawn(process.execPat
 try {
   console.log('Building the synthetic local demo before opening the preview.');
   await run(['tsc','--noEmit']);
+  await import('./copy-evidence.mjs');
   await run(['vite','build']);
-  await run(['vite','preview','--host','127.0.0.1','--port',port,'--strictPort']);
+  const server=spawn(process.execPath,[fileURLToPath(new URL('./serve.mjs',import.meta.url)),'--port',port],{stdio:'inherit'});
+  server.on('exit',code=>{process.exitCode=code??1;});
 }catch(error){console.error(error.message);process.exitCode=1;}
