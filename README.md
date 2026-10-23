@@ -18,6 +18,7 @@ npm run dev
 npm test
 npm run build
 npm run qa
+npm run verify
 ```
 
 Open the localhost URL printed by the server. **`npm run dev` builds the app and serves the validated production bundle locally**, avoiding the hot-reload optimizer's peak memory use on the test workstation. Re-run it after source edits. `npm run dev:vite` offers conventional Vite hot reload on a workstation with sufficient free memory. `npm run preview` serves an existing build without rebuilding. A lockfile records installed versions. The tool launcher bounds native compiler concurrency and local preview heap use.
