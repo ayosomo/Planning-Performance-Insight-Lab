@@ -1,0 +1,90 @@
+{
+  "url": "https://planning-performance-insight-lab.vercel.app/",
+  "screens": [
+    "overview-desktop.jpg",
+    "exception-review-desktop.jpg",
+    "source-lineage-desktop.jpg",
+    "metric-dictionary-desktop.jpg",
+    "portfolio-evidence-desktop.jpg",
+    "overview-mobile.jpg",
+    "exception-review-mobile.jpg",
+    "verified-resolution-desktop.jpg"
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "name": "390px overview has no page-level horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390px review has no page-level horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "Active integrity issue cannot be resolved",
+      "pass": true
+    },
+    {
+      "name": "Correct source, revalidate and close with evidence",
+      "pass": true
+    },
+    {
+      "name": "Native dialog contains keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "Escape closes investigation dialog",
+      "pass": true
+    },
+    {
+      "name": "Resolved finding persists after refresh",
+      "pass": true
+    },
+    {
+      "name": "Audit export contains source correction and verified resolution",
+      "pass": true
+    },
+    {
+      "name": "Separate browser context retains the original 95.0% integrity rate",
+      "pass": true
+    },
+    {
+      "name": "Reset restores the original fixture",
+      "pass": true
+    }
+  ],
+  "accessibility": [
+    {
+      "view": "Overview",
+      "violations": []
+    },
+    {
+      "view": "Exception review",
+      "violations": []
+    },
+    {
+      "view": "Source lineage",
+      "violations": []
+    },
+    {
+      "view": "Metric dictionary",
+      "violations": []
+    },
+    {
+      "view": "Portfolio evidence",
+      "violations": []
+    },
+    {
+      "view": "Overview mobile",
+      "violations": []
+    },
+    {
+      "view": "Exception review mobile",
+      "violations": []
+    },
+    {
+      "view": "Investigation dialog",
+      "violations": []
+    }
+  ]
+}

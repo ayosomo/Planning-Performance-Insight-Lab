@@ -1,0 +1,7 @@
+import {writeFileSync,mkdirSync} from 'node:fs';
+import {analyse,baseline,metrics,workbookControls,SNAPSHOT} from '../src/engine';
+const rows=analyse(baseline),legacy=workbookControls(baseline),all=rows.flatMap(r=>r.findings);
+const output={snapshot:SNAPSHOT,crmRows:baseline.orders.length,supplierRows:baseline.suppliers.length,accounts:new Set(baseline.orders.map(o=>o.account_id)).size,workbookComparison:{pass:legacy.filter(x=>!x.fail).length,fail:legacy.filter(x=>x.fail).length,overdue:legacy.filter(x=>x.overdue).length,escalation:legacy.filter(x=>x.escalate).length},metrics:metrics(rows),findingsByRule:Object.fromEntries([...new Set(all.map(f=>f.rule_id))].sort().map(k=>[k,all.filter(f=>f.rule_id===k).length])),supplierOnlyRows:baseline.suppliers.filter(s=>!baseline.orders.some(o=>o.order_id===s.order_id)).map(s=>s.source_id),limitations:['Actual completion dates not supplied; actual on-time performance unavailable.','Fixed synthetic snapshot; no live integrations.','Browser audit is illustrative, not tamper-proof or authenticated.']};
+mkdirSync('docs',{recursive:true});writeFileSync('docs/fixture-validation.json',JSON.stringify(output,null,2)+'\n');
+console.log(JSON.stringify(output,null,2));
+if(output.crmRows!==240||output.accounts!==35||output.workbookComparison.pass!==208||output.workbookComparison.fail!==32||output.workbookComparison.overdue!==69||output.workbookComparison.escalation!==92)process.exitCode=1;

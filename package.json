@@ -1,0 +1,36 @@
+{
+  "name": "planning-performance-insight-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/local-demo.mjs",
+    "dev:vite": "node scripts/tool.mjs vite --host 127.0.0.1",
+    "test": "node scripts/tool.mjs vitest run",
+    "test:watch": "node scripts/tool.mjs vitest",
+    "build": "node scripts/tool.mjs tsc --noEmit && node scripts/tool.mjs vite build",
+    "preview": "node scripts/tool.mjs vite preview --host 127.0.0.1",
+    "qa": "tsx scripts/qa.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "axe-core": "latest",
+    "jsdom": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vite": "7.3.7",
+    "vitest": "4.1.12"
+  }
+}

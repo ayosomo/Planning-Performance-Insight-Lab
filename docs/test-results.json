@@ -1,0 +1,598 @@
+{
+  "numTotalTestSuites": 11,
+  "numPassedTestSuites": 11,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 45,
+  "numPassedTests": 45,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1792762673182,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application labels the synthetic scope, workbook comparison and unavailable actual outcome",
+          "status": "passed",
+          "title": "labels the synthetic scope, workbook comparison and unavailable actual outcome",
+          "duration": 128.10899999999992,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application supports search, empty results and clearing filters",
+          "status": "passed",
+          "title": "supports search, empty results and clearing filters",
+          "duration": 809.4456,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application filters the KPI denominator to the selected account",
+          "status": "passed",
+          "title": "filters the KPI denominator to the selected account",
+          "duration": 148.64379999999983,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application persists review ownership and status after the application remounts",
+          "status": "passed",
+          "title": "persists review ownership and status after the application remounts",
+          "duration": 1850.4574999999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application blocks closure while the source rule still fails",
+          "status": "passed",
+          "title": "blocks closure while the source rule still fails",
+          "duration": 197.20120000000043,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application requires a deliberate reset and preserves changes when cancelled",
+          "status": "passed",
+          "title": "requires a deliberate reset and preserves changes when cancelled",
+          "duration": 228.1795000000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reviewer-facing application"
+          ],
+          "fullName": "reviewer-facing application shows a recovery warning for corrupt browser state",
+          "status": "passed",
+          "title": "shows a recovery warning for corrupt browser state",
+          "duration": 42.98660000000018,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "automated accessibility structure smoke checks"
+          ],
+          "fullName": "automated accessibility structure smoke checks has no axe structural violations on all five views and investigation dialog",
+          "status": "passed",
+          "title": "has no axe structural violations on all five views and investigation dialog",
+          "duration": 1245.0338000000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1792762675731,
+      "endTime": 1792762680382.0337,
+      "status": "passed",
+      "message": "",
+      "name": "src/App.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "reproducible workbook parity"
+          ],
+          "fullName": "reproducible workbook parity retains all CRM rows, source rows and fictional groups",
+          "status": "passed",
+          "title": "retains all CRM rows, source rows and fictional groups",
+          "duration": 10.10310000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible workbook parity"
+          ],
+          "fullName": "reproducible workbook parity independently reproduces the workbook combined controls and overdue population",
+          "status": "passed",
+          "title": "independently reproduces the workbook combined controls and overdue population",
+          "duration": 5.9085999999999785,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible workbook parity"
+          ],
+          "fullName": "reproducible workbook parity is independent of the current clock and leaves source objects unchanged",
+          "status": "passed",
+          "title": "is independent of the current clock and leaves source objects unchanged",
+          "duration": 9.701700000000073,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls flags both duplicate CRM rows without silently deduplicating",
+          "status": "passed",
+          "title": "flags both duplicate CRM rows without silently deduplicating",
+          "duration": 0.6243999999999232,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls retains a missing supplier row as a critical issue",
+          "status": "passed",
+          "title": "retains a missing supplier row as a critical issue",
+          "duration": 0.5123000000000957,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls keeps all ambiguous supplier matches and excludes their KPI row",
+          "status": "passed",
+          "title": "keeps all ambiguous supplier matches and excludes their KPI row",
+          "duration": 0.4841999999998734,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls fails conflicting completion statuses",
+          "status": "passed",
+          "title": "fails conflicting completion statuses",
+          "duration": 0.38580000000001746,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls flags missing essential columns instead of dropping a record",
+          "status": "passed",
+          "title": "flags missing essential columns instead of dropping a record",
+          "duration": 1.1123000000000047,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls rejects invalid calendar date 2026-02-30",
+          "status": "passed",
+          "title": "rejects invalid calendar date 2026-02-30",
+          "duration": 0.30490000000008877,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls rejects invalid calendar date not-a-date",
+          "status": "passed",
+          "title": "rejects invalid calendar date not-a-date",
+          "duration": 0.3850999999999658,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls rejects invalid calendar date 2026-2-01",
+          "status": "passed",
+          "title": "rejects invalid calendar date 2026-2-01",
+          "duration": 0.14259999999990214,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls rejects invalid calendar date ",
+          "status": "passed",
+          "title": "rejects invalid calendar date ",
+          "duration": 0.2844000000000051,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls accepts leap dates and rejects invalid snapshot dates",
+          "status": "passed",
+          "title": "accepts leap dates and rejects invalid snapshot dates",
+          "duration": 0.6223999999999705,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "integrity controls"
+          ],
+          "fullName": "integrity controls checks supplier update dates and ETA dates",
+          "status": "passed",
+          "title": "checks supplier update dates and ETA dates",
+          "duration": 0.21460000000001855,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators a known absent approval remains reliable but blocked and at risk",
+          "status": "passed",
+          "title": "a known absent approval remains reliable but blocked and at risk",
+          "duration": 0.1914000000001579,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators a known absent permit remains reliable but blocked",
+          "status": "passed",
+          "title": "a known absent permit remains reliable but blocked",
+          "duration": 0.13999999999987267,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators does not infer a live blocker from a constraint category alone",
+          "status": "passed",
+          "title": "does not infer a live blocker from a constraint category alone",
+          "duration": 0.14049999999997453,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators uses strictly greater than 14 days for the ETA-drift finding",
+          "status": "passed",
+          "title": "uses strictly greater than 14 days for the ETA-drift finding",
+          "duration": 0.2898999999999887,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators treats a target on the fixed snapshot as not overdue",
+          "status": "passed",
+          "title": "treats a target on the fixed snapshot as not overdue",
+          "duration": 0.09279999999989741,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators overdue takes precedence over other delivery warnings",
+          "status": "passed",
+          "title": "overdue takes precedence over other delivery warnings",
+          "duration": 0.16219999999998436,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "independent operational indicators"
+          ],
+          "fullName": "independent operational indicators completed records are not open overdue or an invented actual on-time outcome",
+          "status": "passed",
+          "title": "completed records are not open overdue or an invented actual on-time outcome",
+          "duration": 0.3592999999998483,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "metric denominators"
+          ],
+          "fullName": "metric denominators keeps critical rows in quality denominators and excludes them from trusted operational KPIs",
+          "status": "passed",
+          "title": "keeps critical rows in quality denominators and excludes them from trusted operational KPIs",
+          "duration": 0.2887999999998101,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "metric denominators"
+          ],
+          "fullName": "metric denominators returns unavailable for empty denominators",
+          "status": "passed",
+          "title": "returns unavailable for empty denominators",
+          "duration": 0.09149999999999636,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "metric denominators"
+          ],
+          "fullName": "metric denominators forecast adherence includes equality and only uses trusted open records",
+          "status": "passed",
+          "title": "forecast adherence includes equality and only uses trusted open records",
+          "duration": 0.16039999999998145,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1792762683374,
+      "endTime": 1792762683407.3594,
+      "status": "passed",
+      "message": "",
+      "name": "src/engine.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence assignment and investigation do not change a critical failure",
+          "status": "passed",
+          "title": "assignment and investigation do not change a critical failure",
+          "duration": 17.062600000000202,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence cannot resolve an active critical rule or bypass it with acceptance",
+          "status": "passed",
+          "title": "cannot resolve an active critical rule or bypass it with acceptance",
+          "duration": 13.164399999999887,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence requires a reviewer and reason on every review action",
+          "status": "passed",
+          "title": "requires a reviewer and reason on every review action",
+          "duration": 9.980000000000018,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence supports correction, revalidation and verified closure with complete audit trail",
+          "status": "passed",
+          "title": "supports correction, revalidation and verified closure with complete audit trail",
+          "duration": 57.05950000000007,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence requires readiness for validation and the complete closure evidence",
+          "status": "passed",
+          "title": "requires readiness for validation and the complete closure evidence",
+          "duration": 63.1413,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence automatically reopens a resolved rule when a source correction causes recurrence",
+          "status": "passed",
+          "title": "automatically reopens a resolved rule when a source correction causes recurrence",
+          "duration": 87.84680000000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence rejects unchanged corrections and source corrections without evidence",
+          "status": "passed",
+          "title": "rejects unchanged corrections and source corrections without evidence",
+          "duration": 5.711700000000064,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "review state machine and evidence"
+          ],
+          "fullName": "review state machine and evidence updates and audits every affected duplicate row after a join correction",
+          "status": "passed",
+          "title": "updates and audits every affected duplicate row after a join correction",
+          "duration": 48.75630000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "browser persistence and isolation"
+          ],
+          "fullName": "browser persistence and isolation restores review history and source changes after reload",
+          "status": "passed",
+          "title": "restores review history and source changes after reload",
+          "duration": 53.483600000000024,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "browser persistence and isolation"
+          ],
+          "fullName": "browser persistence and isolation separate storage profiles cannot change one another or the baseline",
+          "status": "passed",
+          "title": "separate storage profiles cannot change one another or the baseline",
+          "duration": 13.168099999999868,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "browser persistence and isolation"
+          ],
+          "fullName": "browser persistence and isolation recovers invalid saved state with an explicit warning",
+          "status": "passed",
+          "title": "recovers invalid saved state with an explicit warning",
+          "duration": 4.459100000000035,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "browser persistence and isolation"
+          ],
+          "fullName": "browser persistence and isolation recovers invalid saved state with an explicit warning",
+          "status": "passed",
+          "title": "recovers invalid saved state with an explicit warning",
+          "duration": 3.802900000000136,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "browser persistence and isolation"
+          ],
+          "fullName": "browser persistence and isolation handles storage access being blocked",
+          "status": "passed",
+          "title": "handles storage access being blocked",
+          "duration": 3.564399999999978,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1792762681736,
+      "endTime": 1792762682117.5645,
+      "status": "passed",
+      "message": "",
+      "name": "src/workflow.test.ts"
+    }
+  ]
+}

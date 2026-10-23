@@ -1,0 +1,45 @@
+{
+  "snapshot": "2026-10-23",
+  "crmRows": 240,
+  "supplierRows": 236,
+  "accounts": 35,
+  "workbookComparison": {
+    "pass": 208,
+    "fail": 32,
+    "overdue": 69,
+    "escalation": 92
+  },
+  "metrics": {
+    "total": 240,
+    "pass": 228,
+    "fail": 12,
+    "open": 155,
+    "ready": 107,
+    "readinessRate": "69.0%",
+    "passRate": "95.0%",
+    "forecastTotal": 155,
+    "onSchedule": 103,
+    "forecastRate": "66.5%",
+    "overdue": 66,
+    "blocked": 48,
+    "atRisk": 49,
+    "completed": 73
+  },
+  "findingsByRule": {
+    "COMPLETION_CONFLICT": 6,
+    "CUSTOMER_APPROVAL_MISSING": 8,
+    "DELIVERY_BLOCKER": 40,
+    "DUPLICATE_ORDER_ID": 8,
+    "ETA_DRIFT": 3,
+    "OVERDUE_OPEN_ORDER": 69,
+    "PERMIT_MISSING": 3,
+    "SUPPLIER_DUPLICATE_ID": 8,
+    "SUPPLIER_RECORD_MISSING": 4
+  },
+  "supplierOnlyRows": [],
+  "limitations": [
+    "Actual completion dates not supplied; actual on-time performance unavailable.",
+    "Fixed synthetic snapshot; no live integrations.",
+    "Browser audit is illustrative, not tamper-proof or authenticated."
+  ]
+}
