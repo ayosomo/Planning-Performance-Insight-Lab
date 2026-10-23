@@ -1,3 +1,4 @@
+import {getStepMetadata,RetryableError} from 'workflow';
 import {baseline,type Dataset} from '../src/engine';
 import {assessSnapshot,summarizeSnapshot} from '../src/snapshot-qa';
 
@@ -14,6 +15,7 @@ async function loadSyntheticFixture() {
 }
 async function assessSyntheticFixture(data:Dataset) {
   'use step';
+  if(getStepMetadata().attempt===1)throw new RetryableError('TEMPORARY_RETRY_PROBE: first assessment attempt fails intentionally.',{retryAfter:1000});
   console.log('Snapshot QA: assessing source controls and independent indicators.');
   return assessSnapshot(data);
 }
