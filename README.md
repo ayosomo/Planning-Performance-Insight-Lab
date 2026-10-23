@@ -1,5 +1,7 @@
 # Planning & Performance Insight Lab
 
+[![CI](https://github.com/ayosomo/Planning-Performance-Insight-Lab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ayosomo/Planning-Performance-Insight-Lab/actions/workflows/ci.yml)
+
 A synthetic portfolio demonstration by Olukoyede Osomo. Consolidate two source extracts, inspect data-integrity failures, distinguish operational blockers from delivery risks, and complete an accountable reviewer workflow.
 
 [Open the live demonstration](https://planning-performance-insight-lab.vercel.app/)
@@ -66,6 +68,14 @@ flowchart LR
 ```
 
 React 19 + TypeScript + Vite, Zod, Vitest and React Testing Library. Pure functions own calculations and the review state machine. Charts use labelled HTML bars with visible counts. Vercel serves static assets; no backend, credentials or environment variables are required.
+
+## Continuous integration
+
+[GitHub Actions](.github/workflows/ci.yml) runs on pull requests and pushes to `main`, with an optional manual run from the [Actions page](https://github.com/ayosomo/Planning-Performance-Insight-Lab/actions/workflows/ci.yml). The badge above shows the latest `main` CI status.
+
+The `Tests, fixture QA and build` job uses Node.js 24, installs the lockfile with `npm ci`, and runs `npm run verify`: all automated tests, fixture QA, TypeScript checking and the production build. Actions are pinned to commit SHAs, checkout does not retain credentials, and the workflow has read-only repository permissions. No custom secrets are required.
+
+Vercel independently runs the same verification command before publishing. GitHub Actions supplies an additional check for contributors and reviewers; this workflow does not deploy the application.
 
 ## Deployment verification
 
