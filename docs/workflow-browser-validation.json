@@ -1,0 +1,20 @@
+[
+  {
+    "viewport": "desktop",
+    "workflowCompleted": true,
+    "reloadReconnected": true,
+    "downloadValid": true,
+    "axeViolations": 0,
+    "runtimeErrors": 0,
+    "runId": "wrun_01M5MPMNANXDZ304ABEY7T06TP"
+  },
+  {
+    "viewport": "mobile",
+    "workflowCompleted": true,
+    "reloadReconnected": true,
+    "downloadValid": true,
+    "axeViolations": 0,
+    "runtimeErrors": 0,
+    "runId": "wrun_01M5MPMQX0V6ZYYCR1SKFVNMS7"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "environment": "local compiled Nitro server",
+  "sdk": "workflow@5.2.3",
+  "testsPassed": 47,
+  "workflowSteps": 3,
+  "compiledExecution": true,
+  "serverRestartPersistence": true,
+  "population": {
+    "crmRows": 240,
+    "supplierRows": 236,
+    "accounts": 35
+  },
+  "workbook": {
+    "pass": 208,
+    "review": 32
+  },
+  "integrity": {
+    "pass": 228,
+    "fail": 12
+  },
+  "baselineMatches": true
+}

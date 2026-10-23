@@ -2,7 +2,7 @@ import {copyFile, mkdir, readdir} from 'node:fs/promises';
 
 // Preserve the public evidence URLs when Vercel builds directly from GitHub.
 const root = new URL('../', import.meta.url);
-const output = new URL('dist/evidence/', root);
+const output = new URL('public/evidence/', root);
 await mkdir(output, {recursive: true});
 for (const name of await readdir(new URL('docs/screenshots/', root))) {
   if (name.endsWith('.jpg')) {

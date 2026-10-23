@@ -1,5 +1,9 @@
 node_modules/
 dist/
+.output/
+.nitro/
+.workflow-data/
+public/evidence/
 .vercel/
 coverage/
 *.local
@@ -10,3 +14,4 @@ coverage/
 # Keep local application-review observations and interview preparation private.
 docs/reference-review.md
 docs/walkthrough.md
+/.swc

@@ -6,7 +6,7 @@ A synthetic portfolio demonstration by Olukoyede Osomo. Consolidate two source e
 
 [Open the live demonstration](https://planning-performance-insight-lab.vercel.app/)
 
-Validated with 45 automated tests, 10 end-to-end browser checks and eight rendered accessibility states. All operational data is fictional.
+Validated with 47 automated tests, 10 end-to-end browser checks and eight rendered accessibility states. All operational data is fictional.
 
 ![Planning and performance dashboard](docs/screenshots/overview-desktop.jpg)
 
@@ -21,9 +21,10 @@ npm test
 npm run build
 npm run qa
 npm run verify
+npm run test:workflow
 ```
 
-Open the localhost URL printed by the server. **`npm run dev` builds the app and serves the validated production bundle locally**, avoiding the hot-reload optimizer's peak memory use on the test workstation. Re-run it after source edits. `npm run dev:vite` offers conventional Vite hot reload on a workstation with sufficient free memory. `npm run preview` serves an existing build without rebuilding. A lockfile records installed versions. The tool launcher bounds native compiler concurrency and local preview heap use.
+Open the localhost URL printed by the server. **`npm run dev` builds the client and Nitro server, then serves both locally on port 5173**. Re-run it after source edits. `npm run dev:vite` offers conventional Vite hot reload when workstation memory permits. `npm run preview` serves the existing full-stack build. A lockfile records installed versions. The tool launcher bounds native compiler concurrency.
 
 ## What to explore
 
@@ -52,7 +53,7 @@ See [the reconciliation](docs/workbook-parity.md), [metrics](docs/metrics.md), [
 
 **Accepted Exception** documents a limitation. It does not change the source-derived indicators and remains in unresolved backlog. Acknowledging a known operational blocker does not imply a data correction.
 
-Changes persist in localStorage for the current browser profile. Separate browsers/profiles have separate demonstrations. Tabs in one profile intentionally share the same storage namespace; concurrent tabs are not a collaboration system. No state is sent to a backend. Export the audit before resetting if needed.
+Changes persist in localStorage for the current browser profile. Separate browsers/profiles have separate demonstrations. Tabs in one profile intentionally share the same storage namespace; concurrent tabs are not a collaboration system. Reviewer state is not sent to the server. The separate snapshot QA workflow assesses only the committed synthetic fixture. Export the audit before resetting if needed.
 
 ## Architecture
 
@@ -67,7 +68,13 @@ flowchart LR
   E --> G["Browser-local state + audit export"]
 ```
 
-React 19 + TypeScript + Vite, Zod, Vitest and React Testing Library. Pure functions own calculations and the review state machine. Charts use labelled HTML bars with visible counts. Vercel serves static assets; no backend, credentials or environment variables are required.
+React 19 + TypeScript + Vite, Zod, Vitest and React Testing Library. Pure functions own calculations and the review state machine. Charts use labelled HTML bars with visible counts. Vercel serves the client and Nitro API routes. Workflow SDK 5 runs the separate synthetic snapshot assessment in three durable steps. Reviewer state remains in the browser. No custom credentials are required.
+
+## Synthetic snapshot workflow
+
+On **Overview**, choose **Run snapshot QA**, then download the completed QA summary. The workflow loads the committed fixture, assesses controls, and summarizes baseline checks. It preserves the distinction between expected demo anomalies and actual data reliability. Browser-local corrections and reviewer identities are not uploaded.
+
+See [workflow setup and API usage](docs/first-workflow.md). CI also runs a compiled workflow smoke check and verifies that its completed result survives a server restart.
 
 ## Continuous integration
 
@@ -103,6 +110,6 @@ The [verification record](docs/deployment-verification.json) preserves the deplo
 
 This repository is connected to the `planning-performance-insight-lab` Vercel project. Production deployments use the `main` branch. The committed configuration installs the lockfile with `npm ci`, then runs `npm run verify`: all automated tests, fixture QA, TypeScript checking and the production build must pass before Vercel can publish the new version. A failed command stops deployment and keeps the existing production version live. Pull-request branches receive preview deployments with the same validation. No deployment tokens or GitHub Actions secrets are required. Run `npm run verify` locally before pushing.
 
-`vercel.json` defines this mandatory build gate, static output and security headers. The build also preserves the public `/evidence/` screenshot and architecture URLs. Production must remain synthetic. The original private PDF, workbook and Notion URL are not bundled into the public app.
+`vercel.json` defines this mandatory build gate and security headers. Nitro generates Vercel Build Output API server functions and static assets. The build also preserves the public `/evidence/` screenshot and architecture URLs. Production must remain synthetic. The original private PDF, workbook and Notion URL are not bundled into the public app.
 
 This is an illustrative local workflow, not authenticated multi-user governance. Audit logs can be edited or erased by the visitor and are not tamper-proof. Browser-storage quotas can limit long sessions; failures display a warning and audit export remains available. No production employer integrations, Power BI or Power Automate deployments are claimed. n8n is omitted because there is no meaningful external refresh or notification flow in this scope.
